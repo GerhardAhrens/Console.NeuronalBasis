@@ -165,4 +165,33 @@ namespace Console.NeuronalBasis
         }
     }
     #endregion Implementierung Neuron
+
+    #region Spam Feature Extractor Klasse
+    public static class SpamFeatureExtractor
+    {
+        public static double[] Extract(string text)
+        {
+            text = text.ToLower();
+
+            double containsFree = text.Contains("free") ? 1 : 0;
+            double containsMoney = text.Contains("money") ? 1 : 0;
+            double containsWin = text.Contains("win") ? 1 : 0;
+
+            double linkCount = text.Split("http").Length - 1;
+
+            double upperRatio =
+                text.Count(char.IsUpper) /
+                (double)Math.Max(1, text.Length);
+
+            return new double[]
+            {
+            containsFree,
+            containsMoney,
+            containsWin,
+            linkCount,
+            upperRatio
+            };
+        }
+    }
+    #endregion Spam Feature Extractor Klasse
 }
