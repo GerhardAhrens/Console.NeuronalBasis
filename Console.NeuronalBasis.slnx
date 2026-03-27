@@ -6,5 +6,6 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="Console.NeuronalBasis/Console.NeuronalBasis.csproj" />
+  <Project Path="Console.NeuronalGeneric/Console.NeuronalGeneric.csproj" Id="8cbe0947-0792-4449-a937-1a028ad7de9b" />
   <Project Path="Console.NeuronalXOR/Console.NeuronalXOR.csproj" Id="39f9ef43-ac14-491d-a183-c1f53a68eb47" />
 </Solution>
