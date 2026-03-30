@@ -54,19 +54,19 @@ namespace Console.NeuronalXOR
 
             double[][] inputs =
             {
-            new double[]{0,0},
-            new double[]{0,1},
-            new double[]{1,0},
-            new double[]{1,1}
-        };
+                new double[]{0,0},
+                new double[]{0,1},
+                new double[]{1,0},
+                new double[]{1,1}
+            };
 
             double[][] outputs =
             {
-            new double[]{0},
-            new double[]{1},
-            new double[]{1},
-            new double[]{0}
-        };
+                new double[]{0},
+                new double[]{1},
+                new double[]{1},
+                new double[]{0}
+            };
 
             for (int epoch = 0; epoch < 10000; epoch++)
             {

@@ -46,10 +46,9 @@ namespace Console.NeuronalGeneric
         {
             Console.Clear();
 
-            NeuralNetwork net = new NeuralNetwork(6, new int[] { 6, 1 });
-
+            /* Beispielhafte E-Mails mit Label (1 = Spam, 0 = Kein Spam) */
             var emails = new[]
-            {
+{
                 ("Win money now!!! http://spam.com", 1),
                 ("Free money waiting for you", 1),
                 ("Congratulations you win", 1),
@@ -59,7 +58,9 @@ namespace Console.NeuronalGeneric
                 ("Deine Festplatte ist verschlüsselt. Diese geben für 1000 Bitcoins wieder frei.",1)
             };
 
-            // Training
+            NeuralNetwork net = new NeuralNetwork(emails.Length-1, new int[] { emails.Length-1, 1 });
+
+            /* Training des Spamfilter */
             for (int epoch = 0; epoch < 5000; epoch++)
             {
                 foreach (var mail in emails)
@@ -75,7 +76,7 @@ namespace Console.NeuronalGeneric
             CMenu.Wait();
         }
 
-        static void Test(NeuralNetwork net)
+        private static void Test(NeuralNetwork net)
         {
             string[] tests =
             {
@@ -84,6 +85,7 @@ namespace Console.NeuronalGeneric
                 "Team meeting at 14",
                 "Lunch tomorrow?",
                 "Give me some Bitcoin",
+                "Termin für morgen um 10 Uhr",
             };
 
             foreach (var mail in tests)
