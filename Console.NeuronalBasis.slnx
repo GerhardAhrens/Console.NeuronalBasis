@@ -4,6 +4,8 @@
     <File Path="Neuron_A.png" />
     <File Path="Neuron_B.png" />
     <File Path="README.md" />
+    <File Path="Result_Spamfilter.png" />
+    <File Path="Result_XOR.png" />
   </Folder>
   <Project Path="Console.NeuronalBasis/Console.NeuronalBasis.csproj" />
   <Project Path="Console.NeuronalGeneric/Console.NeuronalGeneric.csproj" Id="8cbe0947-0792-4449-a937-1a028ad7de9b" />
